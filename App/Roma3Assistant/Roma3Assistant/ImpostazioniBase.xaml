@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Roma3Assistant.ImpostazioniBase"
+             BackgroundColor="CadetBlue">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Center">
+            <Button x:Name="profiloUtente" HorizontalOptions="Fill" Text="profilo" BorderColor="Black" TextColor="Black"
+                    BackgroundColor="White" Clicked="profiloUtente_Clicked"></Button>
+            <Button x:Name="security" HorizontalOptions="Fill" Text="sicurezza" BorderColor="Black" TextColor="Black"
+                    BackgroundColor="White" Clicked="security_Clicked"></Button>
+            <Button x:Name="credits" HorizontalOptions="Fill" Text="Credits" BorderColor="Black" TextColor="Black"
+                    BackgroundColor="White" Clicked="credits_Clicked"></Button>
+            <Button x:Name="assistenza" HorizontalOptions="Fill" Text="assistenza" BorderColor="Black" TextColor="Black"
+                    BackgroundColor="White" Clicked="assistenza_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
