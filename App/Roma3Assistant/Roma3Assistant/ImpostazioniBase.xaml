@@ -1,19 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Roma3Assistant.ImpostazioniBase"
-             BackgroundColor="CadetBlue">
+             x:Class="Roma3Assistant.ImpostazioniBase">
     <ContentPage.Content>
-        <StackLayout
+        <StackLayout Padding="40" Spacing="30">
+            <Label Text="Impostazioni" TextColor="#533F95" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+            <StackLayout
             VerticalOptions="Center">
-            <Button x:Name="profiloUtente" HorizontalOptions="Fill" Text="profilo" BorderColor="Black" TextColor="Black"
-                    BackgroundColor="White" Clicked="profiloUtente_Clicked"></Button>
-            <Button x:Name="security" HorizontalOptions="Fill" Text="sicurezza" BorderColor="Black" TextColor="Black"
-                    BackgroundColor="White" Clicked="security_Clicked"></Button>
-            <Button x:Name="credits" HorizontalOptions="Fill" Text="Credits" BorderColor="Black" TextColor="Black"
-                    BackgroundColor="White" Clicked="credits_Clicked"></Button>
-            <Button x:Name="assistenza" HorizontalOptions="Fill" Text="assistenza" BorderColor="Black" TextColor="Black"
-                    BackgroundColor="White" Clicked="assistenza_Clicked"></Button>
+                <Button x:Name="profiloUtente" Text="Utente" TextColor="#533F95" BackgroundColor="Transparent" WidthRequest="160" FontAttributes="Bold" BorderColor="#533F95" BorderWidth="1" BorderRadius="10" Clicked="profiloUtente_Clicked"></Button>
+                <Button x:Name="security" Text="Sicurezza" TextColor="#533F95" BackgroundColor="Transparent" WidthRequest="160" FontAttributes="Bold" BorderColor="#533F95" BorderWidth="1" BorderRadius="10" Clicked="security_Clicked"></Button>
+                <Button x:Name="credits" Text="Credits" TextColor="#533F95" BackgroundColor="Transparent" WidthRequest="160" FontAttributes="Bold" BorderColor="#533F95" BorderWidth="1" BorderRadius="10"  Clicked="credits_Clicked"></Button>
+                <Button x:Name="assistenza" Text="Assistenza" TextColor="#533F95" BackgroundColor="Transparent" WidthRequest="160" FontAttributes="Bold" BorderColor="#533F95" BorderWidth="1" BorderRadius="10"  Clicked="assistenza_Clicked"></Button>
+        </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

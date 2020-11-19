@@ -12,14 +12,18 @@ namespace Roma3Assistant
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ImpostazioniBase : ContentPage
     {
+
+        private PaginaUtente paginaUtente;
+
         public ImpostazioniBase()
         {
             InitializeComponent();
+            paginaUtente = new PaginaUtente();
         }
 
         private void profiloUtente_Clicked(object sender, EventArgs e)
         {
-
+            profiloUtente.Navigation.PushAsync(paginaUtente);
         }
 
         private void security_Clicked(object sender, EventArgs e)
@@ -29,7 +33,7 @@ namespace Roma3Assistant
 
         private void credits_Clicked(object sender, EventArgs e)
         {
-
+            credits.Navigation.PushAsync(new CreditsPage());
         }
 
         private void assistenza_Clicked(object sender, EventArgs e)
