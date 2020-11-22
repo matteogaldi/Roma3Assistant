@@ -1,16 +1,20 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Roma3Assistant
 {
-    public partial class App : Application
+    public partial class App
     {
+        private string _user;
+
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            _ = GetUser();
+            MainPage = _user != null ? new NavigationPage(new MainPage()) : new NavigationPage(new View.LoginPage());
         }
 
         protected override void OnStart()
@@ -23,6 +27,18 @@ namespace Roma3Assistant
 
         protected override void OnResume()
         {
+        }
+
+        private async Task GetUser()
+        {
+            try
+            {
+                _user = await SecureStorage.GetAsync("username");
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+            }
         }
     }
 }
