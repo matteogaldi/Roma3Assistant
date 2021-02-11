@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using static Roma3Assistant.Services.Event;
 
 namespace Roma3Assistant
 {
@@ -10,6 +11,7 @@ namespace Roma3Assistant
         public Calendario()
         {
             InitializeComponent();
+            BindingContext = new BindingClass();
         }
     }
 }

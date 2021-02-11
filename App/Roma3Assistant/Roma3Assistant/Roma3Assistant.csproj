@@ -20,9 +20,9 @@
     <PackageReference Include="Amazon.Extensions.CognitoAuthentication" Version="2.0.0" />
     <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="3.5.0.32" />
     <PackageReference Include="AWSSDK.SecurityToken" Version="3.5.1.12" />
+    <PackageReference Include="Xamarin.Plugin.Calendar" Version="1.2.2936" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
     <Folder Include="View\" />
     <Folder Include="Services\Authentication\" />
   </ItemGroup>
