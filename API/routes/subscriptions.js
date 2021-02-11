@@ -1,44 +1,40 @@
-const mysql = require("mysql");
 const express = require("express");
 const router = express.Router();
 const db = require("../services/database");
+const authMiddleware = require("../services/auth");
 
-const setSubscription = (req, res, next) => {
-  db.getConnection((err, connection) => {
-    if (err) throw err;
-    const sqlString =
-      "INSERT INTO Subscriptions(id, course, student) VALUES (uuid(), ?, ?)";
-    const sql = mysql.format(sqlString, [req.body.courseID, req.body.userID]);
-    connection.query(sql, (err, result) => {
-      if (err) {
-        res.status(500);
-      }
-      connection.release();
-      res.status(200);
-      next();
-    });
+const setSubscription = async (req, res, next) => {
+  req.data = await db.subscriptions.create({
+    data: {
+      student: req.body.studentUUID,
+      course: req.body.courseUUID,
+    },
   });
+  next();
 };
 
-const getSubscription = (req, res, next) => {
-  db.getConnection((err, connection) => {
-    if (err) throw err;
-    const sqlString = "SELECT course FROM Subscriptions WHERE student = ?";
-    const sql = mysql.format(sqlString, [req.body.userID]);
-    connection.query(sql, (err, result) => {
-      if (err) throw err;
-      req.data = result;
-      connection.release;
-      next();
-    });
+const getSubscriptions = async (req, res, next) => {
+  const subs = await db.subscriptions.findMany({
+    where: {
+      student: req.body.uuid,
+    },
+    select: {
+      course: true,
+    },
   });
+  req.data = [];
+  subs.map(({ course }) => {
+    req.data.push(course);
+  });
+  next();
 };
 
-router.post("/", setSubscription, (req, res) => {
+router.post("/", authMiddleware, setSubscription, (req, res) => {
+  res.json(req.data);
   res.end();
 });
 
-router.get("/", getSubscription, (req, res) => {
+router.get("/", authMiddleware, getSubscriptions, (req, res) => {
   res.json(req.data).end();
 });
 
