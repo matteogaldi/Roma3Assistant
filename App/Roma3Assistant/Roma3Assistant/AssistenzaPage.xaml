@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Roma3Assistant.AssistenzaPage">
+    <ContentPage.Content>
+        <StackLayout Padding="40" Spacing="40">
+            <Label Text="Segnalaci il problema" TextColor="#533F95" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+            <StackLayout Spacing="25">
+                <Label Text="Oggetto:" Font="18" TextColor="Black" HorizontalOptions="FillAndExpand" ></Label>
+                <Entry x:Name="oggetto"></Entry>
+                <Label Text="Testo:" Font="18" TextColor="Black" HorizontalOptions="FillAndExpand" ></Label>
+                <Entry x:Name="testo"></Entry>
+                <Button Text="INVIA" x:Name="invia" TextColor="#533F95" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#533F95" BorderWidth="1" BorderRadius="10" HorizontalOptions="EndAndExpand" Clicked="Invia_Clicked" VerticalOptions="EndAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
