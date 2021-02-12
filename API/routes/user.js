@@ -9,6 +9,7 @@ const getUserIdByEmail = async (req, res, next) => {
       email: req.body.email,
     },
   });
+  next();
 };
 
 router.get("/", authenticateMiddleware, getUserIdByEmail, (req, res) => {
