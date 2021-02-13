@@ -19,16 +19,6 @@ namespace Roma3Assistant
             //BindingContext = new PaginaUtenteViewModel(Navigation);
         }
 
-        private void nuovoNome_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nuovoImmagine_Clicked(object sender, EventArgs e)
-        {
-
-        }
-
         private void logout_Clicked(object sender, EventArgs e)
         {
 

@@ -19,7 +19,7 @@ namespace Roma3Assistant
 
         private async void Invia_Clicked(object sender, EventArgs e)
         {
-            await Email.ComposeAsync(oggetto.Text, testo.Text, "mail nostra");
+            await Email.ComposeAsync(oggetto.Text, testo.Text, "roma3assistant@virgilio.it");
         }
     }
 }
