@@ -12,8 +12,8 @@ const getUserIdByEmail = async (req, res, next) => {
   next();
 };
 
-router.get("/", authenticateMiddleware, getUserIdByEmail, (req, res) => {
-  res.json(req, data);
+router.post("/", authenticateMiddleware, getUserIdByEmail, (req, res) => {
+  res.json(req.data);
 });
 
 module.exports = router;
