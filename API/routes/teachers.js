@@ -27,11 +27,11 @@ const getTeacherByID = async (req, res, next) => {
   next();
 };
 
-router.get("/", authMiddleware, getTeachers, (req, res) => {
+router.post("/", authMiddleware, getTeachers, (req, res) => {
   res.json(req.data);
 });
 
-router.get("/:teacherID", authMiddleware, getTeacherByID, (req, res) => {
+router.post("/:teacherID", authMiddleware, getTeacherByID, (req, res) => {
   res.json(req.data);
 });
 

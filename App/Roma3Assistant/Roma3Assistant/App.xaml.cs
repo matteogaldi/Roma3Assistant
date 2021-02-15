@@ -9,6 +9,7 @@ namespace Roma3Assistant
     public partial class App
     {
         private string _user;
+        public static string token;
 
         public App()
         {
@@ -34,6 +35,7 @@ namespace Roma3Assistant
             try
             {
                 _user = await SecureStorage.GetAsync("username");
+                token = await SecureStorage.GetAsync("token");
             }
             catch (Exception e)
             {

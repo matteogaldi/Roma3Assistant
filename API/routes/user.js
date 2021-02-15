@@ -9,10 +9,11 @@ const getUserIdByEmail = async (req, res, next) => {
       email: req.body.email,
     },
   });
+  next();
 };
 
-router.get("/", authenticateMiddleware, getUserIdByEmail, (req, res) => {
-  res.json(req, data);
+router.post("/", authenticateMiddleware, getUserIdByEmail, (req, res) => {
+  res.json(req.data);
 });
 
 module.exports = router;
