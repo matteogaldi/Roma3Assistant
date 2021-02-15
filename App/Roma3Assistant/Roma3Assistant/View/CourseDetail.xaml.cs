@@ -8,12 +8,20 @@ namespace Roma3Assistant.View
 {
     public partial class CourseDetail : ContentPage
     {
-        Course Course;
+        public Course Course { get; private set; }
+        public Teacher Teacher { get; private set; }
         public CourseDetail(Course course)
         {
             InitializeComponent();
             Course = course;
-            BindingContext = Course;
+            Teacher = course.Teachers;
+            BindingContext = this;
         }
+
+        void TeacherName_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TeacherDetail(Teacher));
+        }
+
     }
 }
