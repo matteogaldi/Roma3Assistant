@@ -19,18 +19,25 @@ const setSubscription = async (req, res, next) => {
 };
 
 const getSubscriptions = async (req, res, next) => {
-  const subs = await db.subscriptions.findMany({
-    where: {
-      student: req.body.uuid,
-    },
-    select: {
-      course: true,
-    },
-  });
-  req.data = [];
-  subs.map(({ course }) => {
-    req.data.push(course);
-  });
+  const subs = await db.subscriptions
+    .findMany({
+      where: {
+        student: `${req.body.uuid}`,
+      },
+      select: {
+        course: true,
+      },
+    })
+    .catch((err) => {
+      console.error("Catching error");
+      res.sendStatus(400);
+      res.end();
+    });
+
+  if (subs != undefined) {
+    req.data = [];
+    subs.map(({ course }) => req.data.push(course));
+  }
   next();
 };
 
