@@ -6,9 +6,9 @@ namespace Roma3Assistant.Models
         public string Name { get; set; }
         public int Partition { get; set; }
         public string Teacher { get; set; }
-        public int cfu { get; set; }
-        public int code { get; set; }
-        public string id { get; set; }
+        public int Cfu { get; set; }
+        public int Code { get; set; }
+        public string Id { get; set; }
         public Teacher Teachers { get; set; }
 
         public override string ToString()
