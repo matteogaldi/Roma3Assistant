@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Roma3Assistant.Sicurezza">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button x:Name="cambioPSW" Text="Cambia password" TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="160" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" Clicked="cambioPSW_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

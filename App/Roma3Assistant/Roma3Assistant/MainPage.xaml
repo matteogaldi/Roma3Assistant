@@ -3,8 +3,9 @@
 
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Benvenuto in Roma3Assistant"
-               FontAttributes="Bold" />
-        <Button x:Name="theButton" Text="Entra" Clicked="Button_Clicked"/>
+               FontAttributes="Bold" TextColor="#024DA8" />
+        <Button x:Name="theButton" Text="Entra" Clicked="Button_Clicked"
+                TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10"/>
         <StackLayout x:Name="StackLayoutMap" />
 
     </StackLayout>

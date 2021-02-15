@@ -6,6 +6,6 @@
              Title="Calendario">
 
     <StackLayout>
-        <Label Text="CALENDARIO" HorizontalOptions="Center"/>
+        <Label Text="CALENDARIO" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#024DA8"/>
     </StackLayout>
 </ContentPage>

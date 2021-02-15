@@ -26,4 +26,14 @@
     <Folder Include="View\" />
     <Folder Include="Services\Authentication\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Sicurezza.xaml.cs">
+      <DependentUpon>Sicurezza.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Sicurezza.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

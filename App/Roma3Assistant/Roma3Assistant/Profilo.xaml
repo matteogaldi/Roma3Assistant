@@ -5,5 +5,6 @@
              IconImageSource="https://img.icons8.com/ios-glyphs/2x/contacts.png"
              Title="Profilo">
     <ContentPage.Content>
+        <Button x:Name="impostazioni" Text="Impostazioni" TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="160" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" Clicked="impostazioni_Clicked"></Button>
     </ContentPage.Content>
 </ContentPage>
