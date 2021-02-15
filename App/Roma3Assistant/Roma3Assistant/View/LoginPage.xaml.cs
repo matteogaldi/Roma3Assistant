@@ -2,8 +2,10 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Roma3Assistant.Services;
 using Roma3Assistant.Services.Authentication;
 using Xamarin.Essentials;
+using Roma3Assistant.Models;
 
 namespace Roma3Assistant.View
 {
@@ -36,8 +38,10 @@ namespace Roma3Assistant.View
             var authentication = new AuthenticationService(username);
             var accessToken = await authentication.AuthenticateUser(password);
             var userAttributes = AuthenticationService.GetUserAttributes(accessToken);
+            TokenResponse token = APIConnector.GetToken(userAttributes.First().Value);
             await SecureStorage.SetAsync("username", userAttributes.First().Value);
-            await SecureStorage.SetAsync("token", accessToken);
+            await SecureStorage.SetAsync("accessToken", accessToken);
+            await SecureStorage.SetAsync("token", token.ToString());
         }
 
         private void HandleLoginError(Exception ex)
