@@ -10,6 +10,10 @@ namespace Roma3Assistant
         public Notizie()
         {
             InitializeComponent();
+            var browser = new WebView
+            {
+                Source = "https://www.uniroma3.it"
+            };
         }
     }
 }

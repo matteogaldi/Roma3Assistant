@@ -29,7 +29,7 @@ router.get("/", getCourses, (req, res) => {
   res.send(req.data);
 });
 
-router.get("/:courseID", getCourseInfo, (req, res) => {
+router.post("/:courseID", getCourseInfo, (req, res) => {
   res.json(req.data);
 });
 

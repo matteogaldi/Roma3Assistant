@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Roma3Assistant.View.CourseDetail">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding}">
+            <Label Text="{Binding Course.Name}"/>
+            <Label Text="{Binding Course.Cfu}"/>
+            <Label Text="{Binding Course.Code}"/>
+            <Label Text="{Binding Teacher.Name}"/>
+            <Label Text="{Binding Teacher.Email}"/>
+            <Button Text="{Binding Teacher.Name}" x:Name="teacherName" Clicked="TeacherName_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
