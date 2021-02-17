@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Roma3Assistant.View.TeacherDetail">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding Teacher.Name}"/>
-            <Label Text="{Binding Teacher.Email}"/>
+        <StackLayout Margin="10">
+            <Label Text="Nome del professore:" FontAttributes="Bold" WidthRequest="100" Margin="5"></Label>
+            <Label Text="{Binding Teacher.Name}" TextColor="#024DA8" FontAttributes="Bold" FontSize="Large" Margin="10"/>
+            <Label Text="E-mail del professore:" FontAttributes="Bold" WidthRequest="100" Margin="5"></Label>
+            <Label Text="{Binding Teacher.Email}" TextColor="#024DA8" FontAttributes="Bold" FontSize="Large" Margin="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

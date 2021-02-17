@@ -7,26 +7,29 @@
 
             <Label
                 Text="Roma3 Assistant"
-                HorizontalOptions="Center"
-                Margin="0, 20"
+                TextColor="#024DA8" FontSize="25" HorizontalOptions="CenterAndExpand" 
+                HorizontalTextAlignment="Center"
                 />
 
             <Entry
                 Placeholder="Email"
                 Keyboard="Email"
                 x:Name="UserNameInput"
+                TextColor="Black" HorizontalOptions="FillAndExpand"
                 />
 
             <Entry
                 Placeholder="Password"
                 IsPassword="True"
                 x:Name="PasswordInput"
+                TextColor="Black" HorizontalOptions="FillAndExpand"
                 />
 
             <Button
                 Text="Login"
                 Clicked="LoginButton_Clicked"
-                Margin="60, 40"
+                TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" 
+                Margin="20 60"
                 />
         </StackLayout>
     </ContentPage.Content>

@@ -28,4 +28,14 @@
     <Folder Include="Services\Authentication\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Sicurezza.xaml.cs">
+      <DependentUpon>Sicurezza.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Sicurezza.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
