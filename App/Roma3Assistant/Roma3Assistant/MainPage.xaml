@@ -5,6 +5,7 @@
         <Label Text="Benvenuto in Roma3Assistant"
                FontAttributes="Bold" />
         <Button x:Name="theButton" Text="Entra" Clicked="Button_Clicked"/>
+        <Button x:Name="logout" Text="Logout" Clicked="logout_Clicked"/>
         <StackLayout x:Name="StackLayoutMap" />
 
     </StackLayout>
