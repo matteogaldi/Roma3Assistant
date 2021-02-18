@@ -4,7 +4,7 @@
              x:Class="Roma3Assistant.CreditsPage">
     <ContentPage.Content>
         <StackLayout Padding="40" Spacing="30">
-            <Label Text="Credits:" TextColor="#533F95" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+            <Label Text="Credits:" TextColor="#024DA8" FontSize="25" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
             <StackLayout Spacing="25" VerticalOptions="Center" HorizontalOptions="StartAndExpand">
                 <Label Text="Matteo Galdi" TextColor="Black" Font="18" BackgroundColor="Transparent" WidthRequest="600" FontAttributes="Bold" HorizontalOptions="Center"></Label>
                 <Label Text="Gavriel Di Nepi" TextColor="Black" Font="18" BackgroundColor="Transparent" WidthRequest="600" FontAttributes="Bold" HorizontalOptions="Center"></Label>

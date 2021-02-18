@@ -20,10 +20,22 @@
     <PackageReference Include="Amazon.Extensions.CognitoAuthentication" Version="2.0.0" />
     <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="3.5.0.32" />
     <PackageReference Include="AWSSDK.SecurityToken" Version="3.5.1.12" />
-    <PackageReference Include="Xamarin.Plugin.Calendar" Version="1.2.2936" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Services\" />
     <Folder Include="View\" />
     <Folder Include="Services\Authentication\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Sicurezza.xaml.cs">
+      <DependentUpon>Sicurezza.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Sicurezza.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
