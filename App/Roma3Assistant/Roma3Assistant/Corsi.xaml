@@ -16,14 +16,15 @@
 
                         <Label
                                Text="{Binding Name}"
-                               BackgroundColor="Red"
+                               BackgroundColor="#024DA8"
+                               TextColor="White"
                                />
 
                         <Label Grid.Column="1"
                                
                                Text="{Binding Teachers}"
-                               BackgroundColor="Aquamarine"
-                               VerticalOptions="End"
+                               BackgroundColor="White"
+                               TextColor=" #024DA8"
                                />
                     </Grid>
                 </DataTemplate>
