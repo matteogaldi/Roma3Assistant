@@ -9,7 +9,7 @@ const token = async (req, res) => {
     res.sendStatus(401);
     return;
   } else {
-    jwt.sign({ id: user.id }, "testSecret", (err, token) => {
+    jwt.sign({ id: user.id }, process.env.JWT_SECRET, (err, token) => {
       if (err) res.sendStatus(500);
       else
         res.json({

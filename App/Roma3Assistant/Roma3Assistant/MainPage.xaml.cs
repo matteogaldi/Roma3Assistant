@@ -17,7 +17,8 @@ namespace Roma3Assistant
         }
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new Roma3Assistant.Menu());
+            Navigation.InsertPageBefore(new Menu(), this);
+            Navigation.PopAsync();
 
         }
     }

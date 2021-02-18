@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roma3Assistant.Corsi"
-             
+             IconImageSource="https://icon-icons.com/icons2/908/PNG/256/professor-teaching-on-a-blackboard-in-white-shapes-inside-a-black-rounded-square_icon-icons.com_70639.png"
              Title="Corsi">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding courses}"
+        <CollectionView ItemsSource="{Binding}"
                         SelectionMode="Single"
-                        SelectionChanged="OnSelectionChanged">
+                        SelectionChanged="OnSelectionChanged"
+                        >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10"
@@ -22,7 +23,7 @@
 
                         <Label Grid.Column="1"
                                
-                               Text="{Binding Teachers}"
+                               Text="{Binding TeacherInfo.Name}"
                                BackgroundColor="White"
                                TextColor=" #024DA8"
                                />

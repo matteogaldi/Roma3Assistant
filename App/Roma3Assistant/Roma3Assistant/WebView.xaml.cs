@@ -7,13 +7,13 @@ namespace Roma3Assistant
 {
     public partial class WebView : ContentPage
     {
-       public Uri webUrl { get; private set; }
-        public WebView( Uri uri)
+        public string webUrl { get; private set; }
+        public WebView(string url)
 
         {
             InitializeComponent();
-            webUrl = uri;
-            BindingContext = webUrl.AbsoluteUri;
+            webUrl = url;
+            BindingContext = webUrl;
         }
     }
 }

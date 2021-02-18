@@ -6,6 +6,6 @@
     <local:Notizie />
 	<local:Calendario/>
     <local:Corsi />
-    <local:Profilo />
+    <local:ImpostazioniBase />
     
 </TabbedPage>
