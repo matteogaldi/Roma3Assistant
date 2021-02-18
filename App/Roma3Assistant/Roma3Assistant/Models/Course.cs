@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.Collections;
+using Newtonsoft.Json;
 namespace Roma3Assistant.Models
 {
     public class Course
@@ -32,6 +33,12 @@ namespace Roma3Assistant.Models
 
         [JsonProperty("schedule")]
         public string Schedule { get; set; }
+
+        [JsonProperty("stream")]
+        public string Stream { get; set; }
+
+        [JsonProperty("website")]
+        public string Website { get; set; }
 
         public override string ToString()
         {
