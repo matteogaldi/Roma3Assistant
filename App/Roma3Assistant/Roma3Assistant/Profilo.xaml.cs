@@ -11,5 +11,10 @@ namespace Roma3Assistant
         {
             InitializeComponent();
         }
+
+        private void impostazioni_Clicked(object sender, EventArgs e)
+        {
+            impostazioni.Navigation.PushAsync(new ImpostazioniBase());
+        }
     }
 }

@@ -37,6 +37,7 @@
             </DataTemplate>
 
 
+
         </controls:Calendar.EventTemplate>
     </controls:Calendar>
 </ContentPage>

@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Roma3Assistant
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AssistenzaPage : ContentPage
+    public partial class Sicurezza : ContentPage
     {
-        public AssistenzaPage()
+        public Sicurezza()
         {
             InitializeComponent();
         }
 
-        private async void Invia_Clicked(object sender, EventArgs e)
+        private void cambioPSW_Clicked(object sender, EventArgs e)
         {
-            await Email.ComposeAsync(oggetto.Text, testo.Text, "roma3assistant@virgilio.it");
+
         }
     }
 }
