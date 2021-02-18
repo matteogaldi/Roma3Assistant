@@ -27,8 +27,50 @@ namespace Roma3Assistant.View
 
         void Link_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new WebView(""));
+            if (Course.Notes != null)
+            {
+                Navigation.PushAsync(new WebView(Course.Notes));
+            }
+            else
+            {
+                DisplayAlert("Ooops!", "Non ci sono appunti disponibili per questo corso", "Chiudi");
+            }
         }
 
+        void exams_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (Course.Exams != null)
+            {
+                Navigation.PushAsync(new WebView(Course.Notes));
+            }
+            else
+            {
+                DisplayAlert("Ooops!", "Non ci sono appunti disponibili per questo corso", "Chiudi");
+            }
+        }
+
+        void lessons_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (Course.Stream != null)
+            {
+                Navigation.PushAsync(new WebView(Course.Notes));
+            }
+            else
+            {
+                DisplayAlert("Ooops!", "Non ci sono appunti disponibili per questo corso", "Chiudi");
+            }
+        }
+
+        void website_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (Course.Website != null)
+            {
+                Navigation.PushAsync(new WebView(Course.Notes));
+            }
+            else
+            {
+                DisplayAlert("Ooops!", "Non ci sono appunti disponibili per questo corso", "Chiudi");
+            }
+        }
     }
 }

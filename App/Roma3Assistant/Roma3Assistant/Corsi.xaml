@@ -5,9 +5,10 @@
              
              Title="Corsi">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding courses}"
+        <CollectionView ItemsSource="{Binding}"
                         SelectionMode="Single"
-                        SelectionChanged="OnSelectionChanged">
+                        SelectionChanged="OnSelectionChanged"
+                        >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="10"
@@ -22,7 +23,7 @@
 
                         <Label Grid.Column="1"
                                
-                               Text="{Binding Teachers}"
+                               Text="{Binding TeacherInfo.Name}"
                                BackgroundColor="White"
                                TextColor=" #024DA8"
                                />
