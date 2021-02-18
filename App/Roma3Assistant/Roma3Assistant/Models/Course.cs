@@ -42,7 +42,7 @@ namespace Roma3Assistant.Models
 
         public override string ToString()
         {
-            return $"{Name} {TeacherInfo.Name}";
+            return $"{Name}";
         }
     }
 }

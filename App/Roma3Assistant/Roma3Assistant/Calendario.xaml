@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roma3Assistant.Calendario"
-             IconImageSource="https://img.icons8.com/ios-glyphs/2x/calendar.png"
+             IconImageSource="https://icon-icons.com/icons2/620/PNG/64/weekly-calendar_icon-icons.com_56749.png"
              Title="Calendario"
              xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar">
     

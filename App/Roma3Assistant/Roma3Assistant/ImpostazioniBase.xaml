@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roma3Assistant.ImpostazioniBase"
-             IconImageSource="https://cdn.icon-icons.com/icons2/1337/PNG/512/settingscog_87317.png"
+             IconImageSource="https://icon-icons.com/icons2/933/PNG/64/settings-cogwheel-button_icon-icons.com_72559.png"
              Title="Settings">
 
     <ContentPage.Content>

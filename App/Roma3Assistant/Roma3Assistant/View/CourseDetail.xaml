@@ -34,12 +34,12 @@
             <Label Text="Orari:" FontAttributes="Bold" WidthRequest="100" FontSize="Medium" Margin="5" TextColor="#024DA8"></Label>
             <Label Text="{Binding Course.Schedule}" FontSize="Medium" Margin="5"></Label>
             <Label Text="Link utili:" FontAttributes="Bold" TextColor="#024DA8" WidthRequest="100" FontSize="Medium" Margin="5"/>
-            <Button Text="Materiali"  FontSize="Medium" Margin="5" Clicked="Link_Clicked"/>
-            <Button x:Name="exams" Text="Esami passati"  FontSize="Medium" Margin="5" Clicked="exams_Clicked" />
-            <Button x:Name="lessons" Text="Video lezioni"  FontSize="Medium" Margin="5" Clicked="lessons_Clicked"/>
-            <Button x:Name="website" Text="Sito corso"  FontSize="Medium" Margin="5" Clicked="website_Clicked"/>
+            <Button Text="Materiali"  TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" Clicked="Link_Clicked"/>
+            <Button x:Name="exams" Text="Esami passati"  TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" Clicked="exams_Clicked" />
+            <Button x:Name="lessons" Text="Video lezioni"  TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" Clicked="lessons_Clicked"/>
+            <Button x:Name="website" Text="Sito corso"  TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" Clicked="website_Clicked"/>
             <Button Text="{Binding Teacher.Name}" x:Name="teacherName" Clicked="TeacherName_Clicked"
-                    TextColor="#024DA8" BackgroundColor="Transparent" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" />
+                    TextColor="White" BackgroundColor="#024DA8" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -2,34 +2,55 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roma3Assistant.Corsi"
-             IconImageSource="https://icon-icons.com/icons2/908/PNG/256/professor-teaching-on-a-blackboard-in-white-shapes-inside-a-black-rounded-square_icon-icons.com_70639.png"
+             IconImageSource="https://icon-icons.com/icons2/908/PNG/64/professor-teaching-on-a-blackboard-in-white-shapes-inside-a-black-rounded-square_icon-icons.com_70639.png"
              Title="Corsi">
     <ContentPage.Content>
-        <CollectionView ItemsSource="{Binding}"
+
+        <StackLayout>
+            <Label
+                Text=""
+                TextColor="White"
+                BackgroundColor="#024DA8"
+                FontSize="Title"
+                Padding="3"
+                />
+
+            <Label
+                Text="Corsi 3° Anno"
+                TextColor="#024DA8"
+                HorizontalTextAlignment="Center"
+                FontSize="Title"
+                Padding="3"/>
+
+            <Label
+                Text=""
+                TextColor="White"
+                BackgroundColor="#024DA8"
+                FontSize="Title"
+                Padding="3"/>
+            <CollectionView ItemsSource="{Binding}"
                         SelectionMode="Single"
                         SelectionChanged="OnSelectionChanged"
                         >
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="10"
-                          RowDefinitions="1"
-                          ColumnDefinitions="Auto, *">
 
-                        <Label
-                               Text="{Binding Name}"
-                               BackgroundColor="#024DA8"
-                               TextColor="White"
-                               />
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout
+                            Margin="6"
+                            >
 
-                        <Label Grid.Column="1"
-                               
-                               Text="{Binding TeacherInfo.Name}"
-                               BackgroundColor="White"
-                               TextColor=" #024DA8"
-                               />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                            <Label
+                                Text="{Binding}"
+                                TextColor="White"
+                                BackgroundColor="#024DA8"
+                                FontSize="Title"
+                                Padding="7"
+                                />
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
