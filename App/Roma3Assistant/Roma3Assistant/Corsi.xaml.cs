@@ -14,7 +14,7 @@ namespace Roma3Assistant
         {
             InitializeComponent();
             courses = APIConnector.GetAllCourses();
-            BindingContext = this;
+            BindingContext = courses;
         }
 
         void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
