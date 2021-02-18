@@ -35,14 +35,13 @@ namespace Roma3Assistant
             assistenza.Navigation.PushAsync(new AssistenzaPage());
         }
 
-        private async Task logout_ClickedAsync(object sender, EventArgs e) {
-            bool answer = await DisplayAlert("Sei sicuro?", "", "Si", "No");
-            if (answer)
-            {
-                SecureStorage.RemoveAll();
-                await Navigation.PushAsync(new LoginPage());
-            }
+        private void logout_Clicked(object sender, EventArgs e)
+        {
+            SecureStorage.RemoveAll();
+            Navigation.InsertPageBefore(new LoginPage(), this);
+            Navigation.PopAsync();
+        }
+    
 
         }
     }
-}
