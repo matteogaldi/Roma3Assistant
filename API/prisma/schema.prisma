@@ -14,6 +14,11 @@ model courses {
   cfu           Int?
   code          Int
   id            String          @unique
+  notes         String?
+  exams         String?
+  stream        String?
+  website       String?
+  schedule      String?
   teachers      teachers?       @relation(fields: [teacher], references: [id])
   subscriptions subscriptions[]
 
@@ -21,9 +26,9 @@ model courses {
 }
 
 model students {
-  id            String         @id
-  email         String         @unique
-  subscriptions subscriptions?
+  id            String          @id
+  email         String          @unique
+  subscriptions subscriptions[]
 }
 
 model teachers {
@@ -36,8 +41,10 @@ model teachers {
 }
 
 model subscriptions {
-  student  String   @unique
+  student  String
   course   String
   courses  courses  @relation(fields: [course], references: [id])
   students students @relation(fields: [student], references: [id])
+
+  @@id([student, course])
 }

@@ -3,36 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roma3Assistant.View.CourseDetail">
     <ContentPage.Content>
-        
+
         <StackLayout
             BindingContext="{Binding}" Margin="15">
             <FlexLayout>
-                 <Image Source ="https://ilcreativo.net/wp-content/uploads/2019/04/come-si-fa-il-rosso-300x300.jpg"
+                <Image Source ="https://ilcreativo.net/wp-content/uploads/2019/04/come-si-fa-il-rosso-300x300.jpg"
                    HeightRequest="{OnPlatform iOS=100, Android=100}"
                    WidthRequest="{OnPlatform iOS=50, Android=50}"
                    HorizontalOptions="Start"/>
-                <StackLayout> 
-                <Label Text="{Binding Course.Name}" TextColor="#024DA8" FontAttributes="Bold" FontSize="Large" Margin="10,0,0,0" />
-                     <StackLayout
-                         Orientation="Horizontal">
-                <Label Text="Nome del professore:" FontAttributes="Bold"  FontSize="Small" TextColor="#024DA8"  Margin="5" ></Label>
-            <Label Text="{Binding Teacher.Name}"  FontSize="Small" Margin="5"/>
-                          </StackLayout>
+
+                <StackLayout>
+                    <Label Text="{Binding Course.Name}" TextColor="#024DA8" FontAttributes="Bold" FontSize="Large" Margin="10,0,0,0" />
+
                     <StackLayout
                          Orientation="Horizontal">
-                <Label Text="CFU:" FontAttributes="Bold" FontSize="Small" TextColor="#024DA8" Margin="5"></Label>
-            <Label Text="{Binding Course.Cfu}"   FontSize="Small" Margin="5"/>         
-             <Label Text="Codice corso:" TextColor="#024DA8" FontSize="Small" FontAttributes="Bold" Margin="5"></Label>
-            <Label Text="{Binding Course.Code}"   FontSize="Small" Margin="5"/>
-                        </StackLayout>
-                   </StackLayout> 
+                        <Label Text="Nome del professore:" FontAttributes="Bold"  FontSize="Small" TextColor="#024DA8"  Margin="5" ></Label>
+                        <Label Text="{Binding Teacher.Name}"  FontSize="Small" Margin="5"/>
+                    </StackLayout>
+
+                    <StackLayout
+                         Orientation="Horizontal">
+                        <Label Text="CFU:" FontAttributes="Bold" FontSize="Small" TextColor="#024DA8" Margin="5"></Label>
+                        <Label Text="{Binding Course.Cfu}"   FontSize="Small" Margin="5"/>
+                        <Label Text="Codice corso:" TextColor="#024DA8" FontSize="Small" FontAttributes="Bold" Margin="5"></Label>
+                        <Label Text="{Binding Course.Code}"   FontSize="Small" Margin="5"/>
+                    </StackLayout>
+
+                </StackLayout>
+
             </FlexLayout>
-           
-       
+
+
             <Label Text="Orari:" FontAttributes="Bold" WidthRequest="100" FontSize="Medium" Margin="5" TextColor="#024DA8"></Label>
-            <Label Text="Martedì 8:30 - 10:00" FontSize="Medium" Margin="5"></Label>
-            <Label Text="Link utili:" FontAttributes="Bold" TextColor="#024DA8" WidthRequest="100" FontSize="Medium" Margin="5"></Label>
-            <Button Text="Materiali"  FontSize="Medium" Margin="5"/>
+            <Label Text="{Binding Course.Schedule}" FontSize="Medium" Margin="5"></Label>
+            <Label Text="Link utili:" FontAttributes="Bold" TextColor="#024DA8" WidthRequest="100" FontSize="Medium" Margin="5"/>
+            <Button Text="Materiali"  FontSize="Medium" Margin="5" Clicked="Link_Clicked lol"/>
             <Button Text="Esami passati"  FontSize="Medium" Margin="5"/>
             <Button Text="Video lezioni"  FontSize="Medium" Margin="5"/>
             <Button Text="Sito corso"  FontSize="Medium" Margin="5"/>
