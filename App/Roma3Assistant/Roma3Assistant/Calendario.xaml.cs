@@ -12,6 +12,11 @@ namespace Roma3Assistant
         {
             InitializeComponent();
             BindingContext = new BindingClass();
+
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
         }
     }
 }

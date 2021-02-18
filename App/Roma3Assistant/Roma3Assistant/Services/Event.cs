@@ -12,13 +12,22 @@ namespace Roma3Assistant.Services
         public partial class BindingClass
         {
 
-            public EventCollection Events { get; set; } = new EventCollection
+
+            public EventCollection SavedEvents { get; set; } = new EventCollection
             {
                 [DateTime.Now] = new List<EventModel>
                     {
-                        new EventModel { Name = "Bella pe te ", Description = "Te posso canta na canzone" }
+                        new EventModel { Name = "Analisi I", Description = "Esame di analisi I , 9.00 , aula 11" }
                     }
             };
+
+           public void AggiungiEvento(int day,int month,int year,string nome,string descrizione)
+            {
+                SavedEvents.Add(new DateTime(year, month, day), new List<EventModel>
+                {
+                    new EventModel{ Name= nome , Description=descrizione}
+                });
+            }
         }
     }
 }

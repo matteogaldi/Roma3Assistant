@@ -8,17 +8,17 @@
     
     <controls:Calendar
         Events="{Binding Events}"
-            MonthLabelColor="#533f95"
-            YearLabelColor="#533f95"
-            SelectedDateColor="#533f95"
-            SelectedDayBackgroundColor="#AD99F0"
+            MonthLabelColor="#024DA8"
+            YearLabelColor="#024DA8"
+            SelectedDateColor="#024DA8"
+            SelectedDayBackgroundColor="#9dc4f5"
             EventIndicatorColor="#B98501"
             EventIndicatorSelectedColor="#B98501"
             DaysTitleColor="#B98501"
             SelectedDayTextColor="White"
             DeselectedDayTextColor="Black"
             OtherMonthDayColor="Gray"
-            TodayOutlineColor="#533f95">
+            TodayOutlineColor="#024DA8">
         <controls:Calendar.EventTemplate>
             <DataTemplate>
                 <StackLayout
