@@ -29,7 +29,7 @@
                 Text="Login"
                 Clicked="LoginButton_Clicked"
                 TextColor="#024DA8" BackgroundColor="Transparent" WidthRequest="100" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" 
-                Margin="20 60"
+                Margin="20, 60"
                 />
         </StackLayout>
     </ContentPage.Content>
