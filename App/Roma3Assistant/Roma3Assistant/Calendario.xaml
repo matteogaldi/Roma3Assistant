@@ -3,9 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Roma3Assistant.Calendario"
              IconImageSource="https://img.icons8.com/ios-glyphs/2x/calendar.png"
-             Title="Calendario">
+             Title="Calendario"
+             xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar">
+    
+    <controls:Calendar
+        Events="{Binding Events}"
+            MonthLabelColor="#024DA8"
+            YearLabelColor="#024DA8"
+            SelectedDateColor="#024DA8"
+            SelectedDayBackgroundColor="#9dc4f5"
+            EventIndicatorColor="#B98501"
+            EventIndicatorSelectedColor="#B98501"
+            DaysTitleColor="#B98501"
+            SelectedDayTextColor="White"
+            DeselectedDayTextColor="Black"
+            OtherMonthDayColor="Gray"
+            TodayOutlineColor="#024DA8">
+        <controls:Calendar.EventTemplate>
+            <DataTemplate>
+                <StackLayout
+                Padding="15,0,0,0">
+                    <Label
+                    Text= "{Binding Name}"
+                    FontAttributes="Bold"
+                    FontSize="Medium" 
+                    TextColor="#B98501"/>
+                    <Label
+                    Text="{Binding Description}"
+                    FontSize="Small"
+                    LineBreakMode="WordWrap" 
+                    TextColor="Black"/>
+                </StackLayout>
+            </DataTemplate>
 
-    <StackLayout>
-        <Label Text="CALENDARIO" HorizontalOptions="Center" FontAttributes="Bold" TextColor="#024DA8"/>
-    </StackLayout>
+
+
+        </controls:Calendar.EventTemplate>
+    </controls:Calendar>
 </ContentPage>
