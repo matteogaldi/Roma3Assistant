@@ -14,13 +14,20 @@ namespace Roma3Assistant.View
         {
             InitializeComponent();
             Course = course;
-            Teacher = course.Teachers;
+            Teacher = course.TeacherInfo;
             BindingContext = this;
         }
+
+
 
         void TeacherName_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new TeacherDetail(Teacher));
+        }
+
+        void Link_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new WebView(""));
         }
 
     }
