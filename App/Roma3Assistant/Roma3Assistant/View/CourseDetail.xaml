@@ -7,10 +7,7 @@
         <StackLayout
             BindingContext="{Binding}" Margin="15">
             <FlexLayout>
-                <Image Source ="https://ilcreativo.net/wp-content/uploads/2019/04/come-si-fa-il-rosso-300x300.jpg"
-                   HeightRequest="{OnPlatform iOS=100, Android=100}"
-                   WidthRequest="{OnPlatform iOS=50, Android=50}"
-                   HorizontalOptions="Start"/>
+                
 
                 <StackLayout>
                     <Label Text="{Binding Course.Name}" TextColor="#024DA8" FontAttributes="Bold" FontSize="Large" Margin="10,0,0,0" />
@@ -37,10 +34,10 @@
             <Label Text="Orari:" FontAttributes="Bold" WidthRequest="100" FontSize="Medium" Margin="5" TextColor="#024DA8"></Label>
             <Label Text="{Binding Course.Schedule}" FontSize="Medium" Margin="5"></Label>
             <Label Text="Link utili:" FontAttributes="Bold" TextColor="#024DA8" WidthRequest="100" FontSize="Medium" Margin="5"/>
-            <Button Text="Materiali"  FontSize="Medium" Margin="5" Clicked="Link_Clicked lol"/>
-            <Button Text="Esami passati"  FontSize="Medium" Margin="5"/>
-            <Button Text="Video lezioni"  FontSize="Medium" Margin="5"/>
-            <Button Text="Sito corso"  FontSize="Medium" Margin="5"/>
+            <Button Text="Materiali"  FontSize="Medium" Margin="5" Clicked="Link_Clicked"/>
+            <Button x:Name="exams" Text="Esami passati"  FontSize="Medium" Margin="5" Clicked="exams_Clicked" />
+            <Button x:Name="lessons" Text="Video lezioni"  FontSize="Medium" Margin="5" Clicked="lessons_Clicked"/>
+            <Button x:Name="website" Text="Sito corso"  FontSize="Medium" Margin="5" Clicked="website_Clicked"/>
             <Button Text="{Binding Teacher.Name}" x:Name="teacherName" Clicked="TeacherName_Clicked"
                     TextColor="#024DA8" BackgroundColor="Transparent" FontAttributes="Bold" BorderColor="#024DA8" BorderWidth="1" BorderRadius="10" />
         </StackLayout>
