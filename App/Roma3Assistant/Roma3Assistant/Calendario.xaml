@@ -5,8 +5,10 @@
              IconImageSource="https://img.icons8.com/ios-glyphs/2x/calendar.png"
              Title="Calendario"
              xmlns:controls="clr-namespace:Xamarin.Plugin.Calendar.Controls;assembly=Xamarin.Plugin.Calendar">
-    
-    <controls:Calendar
+
+    <StackLayout>
+        
+        <controls:Calendar
         Events="{Binding Events}"
             MonthLabelColor="#024DA8"
             YearLabelColor="#024DA8"
@@ -40,4 +42,15 @@
 
         </controls:Calendar.EventTemplate>
     </controls:Calendar>
+
+        <Button
+            Margin="0,0,-300,0"
+            Clicked="Button_Clicked"
+            ImageSource="https://icon-icons.com/icons2/1154/PNG/96/1486564412-plus_81511.png"
+            BackgroundColor="white"
+
+        </Button>
+
+    </StackLayout>
+
 </ContentPage>

@@ -8,15 +8,17 @@ namespace Roma3Assistant
 {
     public partial class Calendario : ContentPage
     {
+        public BindingClass Eventi = new BindingClass();
         public Calendario()
         {
             InitializeComponent();
-            BindingContext = new BindingClass();
+            BindingContext = Eventi;
 
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new NewEvent(Eventi));
         }
     }
 }

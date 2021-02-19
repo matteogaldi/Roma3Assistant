@@ -7,13 +7,13 @@ using Xamarin.Plugin.Calendar.Models;
 
 namespace Roma3Assistant.Services
 {
-    class Event
+    public class Event
     {
         public partial class BindingClass
         {
 
 
-            public EventCollection SavedEvents { get; set; } = new EventCollection
+            public EventCollection Events { get; set; } = new EventCollection
             {
                 [DateTime.Now] = new List<EventModel>
                     {
@@ -21,12 +21,12 @@ namespace Roma3Assistant.Services
                     }
             };
 
-           public void AggiungiEvento(int day,int month,int year,string nome,string descrizione)
+            public void AggiungiEvento(DateTime date, string nome, string descrizione)
             {
-                SavedEvents.Add(new DateTime(year, month, day), new List<EventModel>
-                {
-                    new EventModel{ Name= nome , Description=descrizione}
-                });
+                Events.Add(date, new List<EventModel>
+                     {
+                        new EventModel{ Name= nome , Description=descrizione}
+                     });
             }
         }
     }
