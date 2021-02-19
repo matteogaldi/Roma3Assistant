@@ -22,5 +22,9 @@ namespace Roma3Assistant
             Course course = e.CurrentSelection[0] as Course;
             Navigation.PushAsync(new View.CourseDetail(course));
         }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }

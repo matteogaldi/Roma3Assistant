@@ -15,7 +15,7 @@ namespace Roma3Assistant
         {
             InitializeComponent();
             _ = GetUser();
-            MainPage = _user != null ? new NavigationPage(new MainPage()) : new NavigationPage(new View.LoginPage());
+            MainPage = _user != null ? new NavigationPage(new Menu()) : new NavigationPage(new View.LoginPage());
         }
 
         protected override void OnStart()
